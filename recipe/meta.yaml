@@ -1,5 +1,5 @@
 {% set name = "phasepy" %}
-{% set version = "0.0.45" %}
+{% set version = "0.0.46" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/phasepy-{{ version }}.tar.gz
-  sha256: 1177b779cc4db18ff7c51ed265fb98ba4c14187e5d887b0c70e476251eee198f
+  sha256: 7ab3484451dc1914d709c2f005feae57af0ad4c4539b251a4bcb00838bfa046d
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -40,7 +40,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'Multiphase multicomponent Equilibria'
+  summary: Multiphase multicomponent Equilibria
   description: |
     Phasepy is an open-source scientific Python package for calculation
     of physical properties of phases at thermodynamic equilibrium. Main
