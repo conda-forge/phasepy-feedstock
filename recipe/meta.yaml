@@ -25,6 +25,7 @@ requirements:
     - pandas
     - python
     - scipy
+    - openpyxl
 
 test:
   imports:
