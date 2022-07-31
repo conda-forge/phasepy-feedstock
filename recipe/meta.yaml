@@ -1,5 +1,5 @@
 {% set name = "phasepy" %}
-{% set version = "0.0.50" %}
+{% set version = "0.0.51" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/phasepy-{{ version }}.tar.gz
-  sha256: 947d52678dcc4021595b2e2b76c35da0b3695aad30f003c2ce81882975534664
+  sha256: 802753b6cb9a44dbe3f323df5e18d8ba1dc71a08ca01130c23df1ff7b1e2267e
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
