@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/gustavochm/phasepy/archive/v{{ version }}.tar.gz
-  sha256: 9cccc48fc480acebe6315b52aaaa8a2456888456374acc509914e5e3954cbdd0
+  sha256: 7ea9d8c7def1da78958c8ba5373b01c4d1b2699beca7c5fc19e483e4f3c9c5f0
 
 build:
   number: 0
