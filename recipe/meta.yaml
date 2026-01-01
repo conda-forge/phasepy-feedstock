@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/phasepy-{{ version }}.tar.gz
+  url: https://github.com/gustavochm/phasepy/archive/v{{ version }}.tar.gz
   sha256: 9cccc48fc480acebe6315b52aaaa8a2456888456374acc509914e5e3954cbdd0
 
 build:
