@@ -1,22 +1,25 @@
-{% set name = "phasepy" %}
-{% set version = "0.0.56" %}
+schema_version: 1
+
+context:
+  name: phasepy
+  version: "0.0.56"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://github.com/gustavochm/phasepy/archive/v{{ version }}.tar.gz
+  url: https://github.com/gustavochm/phasepy/archive/v${{ version }}.tar.gz
   sha256: 7ea9d8c7def1da78958c8ba5373b01c4d1b2699beca7c5fc19e483e4f3c9c5f0
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 1
+  script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
   host:
     - pip
     - python
@@ -30,19 +33,15 @@ requirements:
     - scipy
     - openpyxl
 
-test:
-  imports:
-    - phasepy
-    - phasepy.actmodels
-  commands:
-    - pip check
-  requires:
-    - pip
+tests:
+  - python:
+      imports:
+        - phasepy
+        - phasepy.actmodels
+      pip_check: true
 
 about:
-  home: https://github.com/gustavochm/phasepy
   license: MIT
-  license_family: MIT
   license_file: LICENSE.txt
   summary: Multiphase multicomponent Equilibria
   description: |
@@ -50,8 +49,9 @@ about:
     of physical properties of phases at thermodynamic equilibrium. Main
     application areas include computation of fluid phase equilibria and
     interfacial properties.
-  doc_url: https://github.com/gustavochm/phasepy
-  dev_url: https://github.com/gustavochm/phasepy
+  homepage: https://github.com/gustavochm/phasepy
+  repository: https://github.com/gustavochm/phasepy
+  documentation: https://github.com/gustavochm/phasepy
 
 extra:
   recipe-maintainers:
